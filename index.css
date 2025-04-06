@@ -1,0 +1,334 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #f8d2d2;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 40px;
+  font-size: 14px;
+}
+
+.top-bar i {
+  margin-right: 5px;
+}
+
+.top-left span {
+  margin-right: 20px;
+}
+
+.top-right a {
+  color: #333;
+  margin-left: 45px;
+  transition: color 0.3s;
+}
+
+.top-right a:hover {
+  color: #e91e63;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo span {
+  color: #00bcd4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e91e63;
+}
+
+/* Hero Section */
+.hero {
+  background: url("your-background-image.jpg") no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  color: #fff;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #ffcccb;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #f8d2d2;
+}
+.featured-cakes {
+  padding: 60px 40px;
+  background-color: #fff8f8;
+  text-align: center;
+}
+
+.featured-cakes h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #e91e63;
+}
+
+.cake-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cake-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.cake-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cake-card p {
+  padding: 15px 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.cake-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .cake-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cake-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.view-btn {
+  display: inline-block;
+  margin: 10px auto 20px;
+  padding: 10px 20px;
+  background-color: #e91e63;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #d81b60;
+}
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  margin-left: 15px;
+}
+
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: background 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #d81b60;
+}
+
+/* Overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Popup box */
+.form-popup {
+  background-color: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.5s ease;
+  position: relative;
+}
+
+.form-popup h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #e91e63;
+}
+
+/* Input fields */
+.form-popup input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-popup button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-popup button[type="submit"]:hover {
+  background-color: #d81b60;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
