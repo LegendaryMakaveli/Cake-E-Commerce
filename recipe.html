@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="recipe.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-left">
+        <span><i class="fas fa-phone-alt"></i> +1 (800) 456 7890</span>
+        <span><i class="fas fa-envelope"></i> info@cakebakery.com</span>
+      </div>
+      <div class="top-right">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Maka<span>Bakery</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <section class="recipes-section">
+      <h2 style="text-align: center; color: #ca5f83">Cake Recipes 🍰</h2>
+      <div class="recipes-grid">
+        <div class="recipe-card">
+          <img src="cake1.jpg" alt="Vanilla Cake" />
+          <div class="recipe-content">
+            <h3 class="recipe-title">Classic Vanilla Cake</h3>
+            <p class="recipe-desc">
+              A light and fluffy cake made with butter, vanilla, and a touch of
+              love. Perfect for any occasion.
+            </p>
+            <button
+              class="read-more-btn"
+              onclick="alert('Full recipe coming soon!')"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <img src="shopcake2.jpg" alt="Red Velvet" />
+          <div class="recipe-content">
+            <h3 class="recipe-title">Red Velvet Dream</h3>
+            <p class="recipe-desc">
+              Rich, velvety layers with cream cheese frosting. This cake is a
+              showstopper and a favorite for all.
+            </p>
+            <button
+              class="read-more-btn"
+              onclick="alert('Full recipe coming soon!')"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <img src="shopcake11.jpg" alt="Chocolate Cake" />
+          <div class="recipe-content">
+            <h3 class="recipe-title">Decadent Chocolate Cake</h3>
+            <p class="recipe-desc">
+              Moist and rich chocolate layers with fudge frosting. A chocolate
+              lover’s dream come true.
+            </p>
+            <button
+              class="read-more-btn"
+              onclick="openRecipeModal('chocolate')"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="chocolate-modal" class="recipe-modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeRecipeModal('chocolate')"
+            >&times;</span
+          >
+          <h2>Decadent Chocolate Cake Recipe</h2>
+          <p>
+            <strong>Ingredients:</strong> Flour, Cocoa powder, Eggs, Sugar,
+            Butter, Baking powder, Chocolate ganache.
+          </p>
+          <p><strong>Steps:</strong></p>
+          <ol>
+            <li>Preheat oven to 350°F (175°C).</li>
+            <li>Mix dry ingredients together.</li>
+            <li>Add eggs and melted butter, mix well.</li>
+            <li>Pour into baking pan and bake for 30-35 mins.</li>
+            <li>Cool, frost with ganache, and enjoy!</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function openRecipeModal(id) {
+        document.getElementById(`${id}-modal`).style.display = "flex";
+      }
+
+      function closeRecipeModal(id) {
+        document.getElementById(`${id}-modal`).style.display = "none";
+      }
+    </script>
+  </body>
+</html>

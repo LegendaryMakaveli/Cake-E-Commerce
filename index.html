@@ -9,12 +9,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("6P5OlcYArybYlnCdG"); // Replace with your public key
-      })();
-    </script>
   </head>
   <body>
     <!-- Top Bar -->
@@ -28,10 +22,7 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
         <a href="#"><i class="fas fa-tiktok"></i></a>
-        <a href="#"><i class="fas fa-search"></i></a>
       </div>
-      <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
-      <button id="openCheckoutBtn" class="checkout-btn">Checkout</button>
     </div>
 
     <!-- Navbar -->
@@ -39,12 +30,9 @@
       <div class="logo">Maka<span>Bakery</span></div>
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Our Cakes</a></li>
         <li><a href="#">Menu</a></li>
         <li><a href="#">About Us</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Shop</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
     </nav>
@@ -59,7 +47,7 @@
           Neque enim fugiat voluptatum quia voluptatis sit aspernatur aut odit
           aut fugit
         </p>
-        <a href="#" class="btn">See the recipe</a>
+        <a href="recipe.html" class="btn">See the recipe</a>
       </div>
     </header>
     <!-- Featured Cakes Section -->
@@ -69,118 +57,28 @@
         <div class="cake-card">
           <img src="cake1.jpg" alt="Cake 1" />
           <p>Vanilla Delight</p>
-          <button class="add-to-cart-btn" data-name="Vanilla Delight">
-            Add to Cart
-          </button>
         </div>
         <div class="cake-card">
           <img src="cake2.jpg" alt="Cake 2" />
           <p>Chocolate Heaven</p>
-          <button class="add-to-cart-btn" data-name="Chocolate Heaven">
-            Add to Cart
-          </button>
         </div>
         <div class="cake-card">
           <img src="cake3.jpg" alt="Cake 3" />
           <p>Strawberry Swirl</p>
-          <button class="add-to-cart-btn" data-name="Strawberry Swirl">
-            Add to Cart
-          </button>
         </div>
         <div class="cake-card">
           <img src="cake4.jpg" alt="Cake 4" />
           <p>Red Velvet</p>
-          <button class="add-to-cart-btn" data-name="Red Velvet">
-            Add to Cart
-          </button>
         </div>
         <div class="cake-card">
           <img src="cake5.jpg" alt="Cake 5" />
           <p>Caramel Drizzle</p>
-          <button class="add-to-cart-btn" data-name="Caramel Drizzle">
-            Add to Cart
-          </button>
         </div>
         <div class="cake-card">
           <img src="cake6.jpg" alt="Cake 6" />
           <p>Buttercream Bliss</p>
-          <button class="add-to-cart-btn" data-name="Buttercream Bliss">
-            Add to Cart
-          </button>
-        </div>
-        <div class="cake-card">
-          <img src="cake7.jpg" alt="Cake 7" />
-          <p>Cookies & Cream</p>
-          <button class="add-to-cart-btn" data-name="Cookies & Cream">
-            Add to Cart
-          </button>
-        </div>
-        <div class="cake-card">
-          <img src="cake8.jpg" alt="Cake 8" />
-          <p>Lemon Zest</p>
-          <button class="add-to-cart-btn" data-name="Lemon Zest">
-            Add to Cart
-          </button>
-        </div>
-        <div class="cake-card">
-          <img src="cake9.jpg" alt="Cake 9" />
-          <p>Mint Chocolate</p>
-          <button class="add-to-cart-btn" data-name="Mint Chocolate">
-            Add to Cart
-          </button>
-        </div>
-        <div class="cake-card">
-          <img src="cake10.jpg" alt="Cake 10" />
-          <p>Hazelnut Crush</p>
-          <button class="add-to-cart-btn" data-name="Hazelnut Crush">
-            Add to Cart
-          </button>
-        </div>
-        <div class="cake-card">
-          <img src="cake11.jpg" alt="Cake 11" />
-          <p>Fruit Fiesta</p>
-          <button class="add-to-cart-btn" data-name="Fruit Fiesta">
-            Add to Cart
-          </button>
-        </div>
-        <div class="cake-card">
-          <img src="cake12.jpg" alt="Cake 12" />
-          <p>Coffee Cream</p>
-          <button class="add-to-cart-btn" data-name="Coffee Cream">
-            Add to Cart
-          </button>
         </div>
       </div>
     </section>
-    <!-- Overlay + Form Modal -->
-    <div id="checkoutOverlay" class="overlay">
-      <div class="form-popup">
-        <span class="close-btn" onclick="closeCheckout()">&times;</span>
-        <h2>Complete Your Cake Order 🍰</h2>
-        <form id="orderForm">
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Your Name"
-            required
-          />
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Your Email"
-            required
-          />
-          <input
-            type="tel"
-            name="user_phone"
-            placeholder="Phone Number"
-            required
-          />
-          <input type="hidden" name="cake_order" id="cake_order" />
-          <button type="submit">Place Order</button>
-        </form>
-      </div>
-    </div>
-    <script src="index.js"></script>
   </body>
 </html>

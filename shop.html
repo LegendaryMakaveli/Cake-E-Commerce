@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Cake Shop</title>
+    <link rel="stylesheet" href="shop.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("6P5OlcYArybYlnCdG"); // Replace with your public key
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-left">
+        <span><i class="fas fa-phone-alt"></i> +1 (800) 456 7890</span>
+        <span><i class="fas fa-envelope"></i> info@cakebakery.com</span>
+      </div>
+      <div class="top-right">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-tiktok"></i></a>
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+      <button id="openCheckoutBtn" class="checkout-btn">Checkout</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Maka<span>Bakery</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <section class="shop-section">
+      <h1 class="shop-title">Our Cake Shop</h1>
+      <p class="shop-subtitle">Pick your favorite and add to cart</p>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="shopcake1.jpg" alt="Cake 1" />
+          <div class="product-name">Chocolate Delight</div>
+          <span class="product-price">$115.10</span>
+          <button class="add-to-cart-btn" data-name="Chocolate Delight">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake2.jpg" alt="Cake 2" />
+          <div class="product-name">Red Velvet</div>
+          <span class="product-price">$100.55</span>
+          <button class="add-to-cart-btn" data-name="Red Velvet">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake3.jpg" alt="Cake 3" />
+          <div class="product-name">Lemon Drizzle</div>
+          <span class="product-price">$212.23</span>
+          <button class="add-to-cart-btn" data-name="Lemon Drizzle">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake4.jpg" alt="Cake 4" />
+          <div class="product-name">Black Forest</div>
+          <span class="product-price">$96.20</span>
+          <button class="add-to-cart-btn" data-name="Black Forest">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="shopcake5.jpg" alt="Cake 5" />
+          <div class="product-name">Carrot Cake</div>
+          <span class="product-price">$80.67</span>
+          <button class="add-to-cart-btn" data-name="Carrot cake">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake6.jpg" alt="Cake 6" />
+          <div class="product-name">Strawberry Cake</div>
+          <span class="product-price">$100.77</span>
+          <button class="add-to-cart-btn" data-name="Strawberry Cake">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake7.jpg" alt="Cake 7" />
+          <div class="product-name">Coconut Cake</div>
+          <span class="product-price">$200.67</span>
+          <button class="add-to-cart-btn" data-name="Coconut Cake">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="shopcake8.jpg" alt="Cake 8" />
+          <div class="product-name">Marble Cake</div>
+          <span class="product-price">$190.90</span>
+          <button class="add-to-cart-btn" data-name="Marble Cake">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake9.jpg" alt="Cake 9" />
+          <div class="product-name">Coffee Cake</div>
+          <span class="product-price">$60.99</span>
+          <button class="add-to-cart-btn" data-name="Coffee Cake">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake10.jpg" alt="Cake 10" />
+          <div class="product-name">Angel Food Cake</div>
+          <span class="product-price">$321.54</span>
+          <button class="add-to-cart-btn" data-name="Angel Food Cake">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="shopcake11.jpg" alt="Cake 11" />
+          <div class="product-name">German Chocolate Cake</div>
+          <span class="product-price">$84.44</span>
+          <button class="add-to-cart-btn" data-name="German Chocolate Cake">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake12.jpg" alt="Cake 12" />
+          <div class="product-name">Pound Cake</div>
+          <span class="product-price">$109.99</span>
+          <button class="add-to-cart-btn" data-name="Pound Cake">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake13.jpg" alt="Cake 13" />
+          <div class="product-name">Banana Cake</div>
+          <span class="product-price">$330.99</span>
+          <button class="add-to-cart-btn" data-name="Banana Cake">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="shopcake14.jpg" alt="Cake 14" />
+          <div class="product-name">Oreo Cake</div>
+          <span class="product-price">$400.11</span>
+          <button class="add-to-cart-btn" data-name="Oreo Cake">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake15.jpg" alt="Cake 15" />
+          <div class="product-name">Tiramisu Cake</div>
+          <span class="product-price">$205.50</span>
+          <button class="add-to-cart-btn" data-name="Tiramisu Cake">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake16.jpg" alt="Cake 16" />
+          <div class="product-name">Raspberry Cake</div>
+          <span class="product-price">$235.78</span>
+          <button class="add-to-cart-btn" data-name="Raspberry Cake">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="shopcake17.jpg" alt="Cake 17" />
+          <div class="product-name">Pineapple Upside-down Cake</div>
+          <span class="product-price">$100.99</span>
+          <button
+            class="add-to-cart-btn"
+            data-name="Pineapple Upside-down Cake"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake18.jpg" alt="Cake 18" />
+          <div class="product-name">Peanut Butter Cake</div>
+          <span class="product-price">$85.44</span>
+          <button class="add-to-cart-btn" data-name="Peanut Butter Cake">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="shopcake19.jpg" alt="Cake 19" />
+          <div class="product-name">Caramel Cake</div>
+          <span class="product-price">$120.44</span>
+          <button class="add-to-cart-btn" data-name="Caramel Cake">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="shopcake20.jpg" alt="Cake 20" />
+          <div class="product-name">Apple Cake</div>
+          <span class="product-price">$200.75</span>
+          <button class="add-to-cart-btn" data-name="Apple Cake">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="cart-preview" id="cartPreview">
+      <h3>Your Cart 🛒</h3>
+      <div id="cartItems"></div>
+    </div>
+
+    <!-- Overlay + Form Modal -->
+    <div id="checkoutOverlay" class="overlay">
+      <div class="form-popup">
+        <span class="close-btn" onclick="closeCheckout()">&times;</span>
+        <h2>Complete Your Cake Order 🍰</h2>
+        <form id="orderForm">
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+          />
+          <input
+            type="tel"
+            name="user_phone"
+            placeholder=" WhatsApp Number to confirm your order pls!"
+            required
+          />
+          <input type="hidden" name="cake_order" id="cake_order" />
+          <button type="submit">Place Order</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="shop.js"></script>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fffafc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #f8d2d2;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 40px;
+  font-size: 14px;
+}
+
+.top-bar i {
+  margin-right: 5px;
+}
+
+.top-left span {
+  margin-right: 20px;
+}
+
+.top-right a {
+  color: #333;
+  margin-left: 45px;
+  transition: color 0.3s;
+}
+
+.top-right a:hover {
+  color: #e91e63;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo span {
+  color: #00bcd4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e91e63;
+}
+
+.recipes-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.recipe-content {
+  padding: 15px;
+}
+
+.recipe-title {
+  font-size: 18px;
+  color: #ca5f83;
+  margin-bottom: 8px;
+}
+
+.recipe-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.read-more-btn {
+  margin-top: 12px;
+  background-color: #ca5f83;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .recipe-title {
+    font-size: 16px;
+  }
+  .recipe-desc {
+    font-size: 13px;
+  }
+}
+
+.recipe-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #ca5f83;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Mobile responsiveness for recipe grid */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Adjust recipe card */
+.recipe-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.recipe-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.recipe-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.recipe-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.read-more-btn {
+  background-color: #ca5f83;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #a94867;
+}
+
+/* Modal on small screens */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .recipe-title {
+    font-size: 1rem;
+  }
+
+  .recipe-desc {
+    font-size: 0.9rem;
+  }
+
+  .read-more-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .top-bar,
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .top-bar .social-links,
+  .navbar .menu {
+    flex-wrap: wrap;
+  }
+  .modal-content {
+    width: 100%;
+    margin-right: 30px;
+  }
+}
