@@ -234,6 +234,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    font-size: 14px;
   }
 
   .top-bar .social-links,

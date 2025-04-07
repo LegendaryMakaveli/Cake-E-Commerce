@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us MakaBakery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Contact.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-left">
+        <span><i class="fas fa-phone-alt"></i> +1 (800) 456 7890</span>
+        <span><i class="fas fa-envelope"></i> info@Makabakery.com</span>
+      </div>
+      <div class="top-right">
+        <a href="https://facebook.com/CERTIFIED SAINT HARKORHEDE"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://instagram.com/DATTRUCKERBOY_MAKAVELI"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://linkedin.com/in/ADEYEMO EMMANUEL"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a
+          href="https://www.tiktok.com/@dattruckerboy_makaveli?_t=ZM-8vL9cLXTVLT&_r=1"
+          ><i class="fab fa-tiktok"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Maka<span>Bakery</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+    </nav>
+
+    <div class="contact-wrapper">
+      <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>
+          We'd love to hear from you! Send us a message or connect on social
+          media.
+        </p>
+
+        <form id="contactForm">
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="social-links">
+          <p>Follow us on:</p>
+          <a
+            href="https://facebook.com/CERTIFIED SAINT HARKORHEDE"
+            target="_blank"
+            >Facebook</a
+          >
+          <a href="https://instagram.com/DATTRUCKERBOY_MAKAVELI" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://linkedin.com/in/ADEYEMO EMMANUEL" target="_blank"
+            >LinkedIn</a
+          >
+          <a
+            href="https://www.tiktok.com/@dattruckerboy_makaveli?_t=ZM-8vL9cLXTVLT&_r=1"
+            target="_blank"
+            >Tik-Tok</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Include EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("cBvhvQ0p7fWifaavG"); // Replace with your public key
+      })();
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          emailjs.sendForm("service_cliifku", "template_yoffwln", this).then(
+            function () {
+              alert("📨 Message sent successfully!");
+              document.getElementById("contactForm").reset();
+            },
+            function (error) {
+              console.log("FAILED...", error);
+              alert("❌ Failed to send message. Please try again later.");
+            }
+          );
+        });
+    </script>
+  </body>
+</html>

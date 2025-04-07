@@ -1,0 +1,139 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5f7;
+  color: #333;
+}
+
+.top-bar {
+  background-color: #f69494;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 40px;
+  font-size: 14px;
+}
+
+.top-bar i {
+  margin-right: 15px;
+}
+
+.top-left span {
+  margin-right: 30px;
+}
+
+.top-right a {
+  color: #333;
+  margin-left: 55px;
+  transition: color 0.3s;
+}
+
+.top-right a:hover {
+  color: #e91e63;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo span {
+  color: #00bcd4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e91e63;
+}
+
+.about-header {
+  background-color: #ca5f83;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  color: #ca5f83;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .top-bar,
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .top-bar .social-links,
+  .navbar .menu {
+    flex-wrap: wrap;
+  }
+}
