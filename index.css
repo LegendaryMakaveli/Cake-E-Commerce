@@ -70,8 +70,8 @@ body {
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
+  font-family: "Times New Roman", Times, serif;
 }
-
 .nav-links a:hover {
   color: #e91e63;
 }
@@ -235,6 +235,9 @@ body {
     align-items: flex-start;
     gap: 10px;
     font-size: 14px;
+  }
+  .navbar {
+    font-size: 18px;
   }
 
   .top-bar .social-links,

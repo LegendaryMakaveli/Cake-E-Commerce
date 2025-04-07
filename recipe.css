@@ -64,6 +64,7 @@ body {
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .nav-links a:hover {
@@ -260,7 +261,9 @@ body {
     gap: 10px;
     font-size: 12px;
   }
-
+  .navbar {
+    font-size: 17px;
+  }
   .top-bar .social-links,
   .navbar .menu {
     flex-wrap: wrap;

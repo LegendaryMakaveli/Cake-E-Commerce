@@ -58,7 +58,7 @@
             </p>
             <button
               class="read-more-btn"
-              onclick="alert('Full recipe coming soon!')"
+              onclick="openRecipeModal('vanilla')"
             >
               Read More
             </button>
@@ -74,11 +74,11 @@
               showstopper and a favorite for all.
             </p>
             <button
-              class="read-more-btn"
-              onclick="alert('Full recipe coming soon!')"
-            >
-              Read More
-            </button>
+            class="read-more-btn"
+            onclick="openRecipeModal('red velvet')"
+          >
+            Read More
+          </button>
           </div>
         </div>
 
@@ -100,6 +100,74 @@
         </div>
       </div>
 
+      <div id="vanilla-modal" class="recipe-modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeRecipeModal('vanilla')"
+            >&times;</span
+          >
+          <h2>Classic Vanilla Cake Recipe</h2>
+          <p>
+            <strong>Ingredients:</strong>
+           <ol>
+            <li>2 and half cups of all-purpose flour</li>
+            <li>2 and half teaspoons of baking power</li>
+            <li>Half teaspoon of salt</li>
+            <li>Quater cup of unsalted butter(softened)</li>
+            <li>Half teaspoon of salt</li>
+            <li>1 and half cups of granulated sugar</li>
+            <li>4 large eggs</li>
+            <li>1 cups of whole milk(or buttermilk for extra softness)</li>
+            <li>2 teaspoons of vanilla extract</li>
+           </ol>
+          </p>
+          <p><strong>Steps:</strong></p>
+          <ol>
+            <li><strong>Preheat oven</strong> to 350°F (175°C).Greese and flour two <br>9-inch round cake pans or one 9x13 inch pan.</li>
+            <li>In a <strong>medium bowl,</strong> whilsk together flour,baking powder and salt.</li>
+            <li>In a <strong>large bowl,</strong> cream the butter and sugar until light and fluffy(about 2-3 minutes).</li>
+            <li>Beat in the eggs one at a time,then add vanilla extract.</li>
+            <li>Add the dry ingredients to the wet mixture in 3 parts,alternating with milk. <br> Start and end with the dry ingredients.Mix just until smooth --don't overmix</li>
+            <li>Pour the batter evenly into the prepared pan(s) and smooth the top.</li>
+            <li><strong>Bake</strong> for: <br><strong>Round pans:</strong>25-30 minutes <br><strong>9x13 pan:</strong>30-35 minutes <br>or until a toothpick inserted in the center comes out clean.</li>
+            <li>Let cool completely before frosting.</li>
+          </ol>
+        </div>
+      </div>
+      <div id="red velvet-modal" class="recipe-modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeRecipeModal('red velvet')"
+            >&times;</span
+          >
+          <h2>Red Velvet Dream Cake Recipe</h2>
+          <p>
+            <strong>Ingredients:</strong>
+           <ol>
+            <li>2 and quater cups of all-purpose flour</li>
+            <li>2 tablespoons of unsweetened cocoa powder</li>
+            <li>1 teaspoonof baking soda</li>
+            <li>Half teaspoon of salt</li>
+            <li>1 cup of buttermilk(or 1 cup of milk + 1 tablespoon of vinegar,rest for 10 mins)</li>
+            <li>1 teaspoon of white vinegar</li>
+            <li>1 teaspoon of vanilla extract</li>
+            <li>1 cup ofunsalted butter(softened)</li>
+            <li>1 and half cups of granulated sugar</li>
+            <li>2 large eggs</li>
+            <li>2 tablespoonsnof red food coloring(liquid or gel)</li>
+           </ol>
+          </p>
+          <p><strong>Instructions:</strong></p>
+          <ol>
+            <li><strong>Preheat oven</strong> to 350°F (175°C).Greese and flour two <br>9-inch round cake pans or one 9x13 inch pan.</li>
+            <li>In a <strong>medium bowl,</strong> whilsk together flour,baking powder and salt.</li>
+            <li>In a <strong>small bowl,</strong> combine buttermilk,vinegar,vanilla and red food coloring.Stir well.</li>
+            <li>In a <strong>large bowl,</strong> beat butter and sugar until light and fluffy(about 2-3 minutes). Add eggs one at a time,beating after each.</li>
+            <li>Add the dry ingredients and the wet ingredients to the butter-sugar mix in alternating batches (starting and end with dry). Mix until just combined.</li>
+            <li>Pour the batter evenly into the prepared pan(s) and smooth the top.</li>
+            <li><strong>Bake</strong> for: <br><strong>Round pans:</strong>25-30 minutes <br><strong>9x13 pan:</strong>30-35 minutes <br>or until a toothpick inserted in the center comes out clean.</li>
+            <li>Let cool completely before frosting.</li>
+          </ol>
+        </div>
+      </div>
       <div id="chocolate-modal" class="recipe-modal">
         <div class="modal-content">
           <span class="close-modal" onclick="closeRecipeModal('chocolate')"
@@ -107,19 +175,33 @@
           >
           <h2>Decadent Chocolate Cake Recipe</h2>
           <p>
-            <strong>Ingredients:</strong> Flour, Cocoa powder, Eggs, Sugar,
-            Butter, Baking powder, Chocolate ganache.
+            <strong>Ingredients:</strong>
+           <ol>
+            <li>1 and quater cups of all-purpose flour</li>
+            <li>Quater cup of unsweetened cocoa powder</li>
+            <li>1 and half teaspoons of baking powder</li>
+            <li>1 and half teaspoons of baking soda</li>
+            <li>Half teaspoon of salt</li>
+            <li>2 cups of sugar</li>
+            <li>2 large eggs</li>
+            <li>1 cups of milk</li>
+            <li>Half cup of vegetable oil</li>
+            <li>2 teaspoons of vanilla extract</li>
+            <li>1 cup of boiling water or hot coffee(coffee enhances the chocolate flavor)</li>
+           </ol>
           </p>
           <p><strong>Steps:</strong></p>
           <ol>
-            <li>Preheat oven to 350°F (175°C).</li>
-            <li>Mix dry ingredients together.</li>
-            <li>Add eggs and melted butter, mix well.</li>
-            <li>Pour into baking pan and bake for 30-35 mins.</li>
-            <li>Cool, frost with ganache, and enjoy!</li>
+            <li><strong>Preheat oven</strong> to 350°F (175°C).Greese and flour two <br>9-inch round cake pans or one 9x13 inch pan.</li>
+            <li>In a <strong>large bowl,</strong>mix flour,cocoa powder,baking powder,baking soda,salt and sugar.</li>
+            <li>Add eggs,milk,oil and vanilla.Mix until well combined.</li>
+            <li>Carefully stir in the hot water/coffee(the batter will be thin --that's okay).</li>
+            <li>Pour into prepared pan(s) and bake for: <br><strong>Round pans:</strong>30-35 minutes <br><strong>9x13 pan:</strong>35-40 minutes <br>or until a toothpick inserted in the center comes out clean.</li>
+            <li>Let cool completely before frosting.</li>
           </ol>
         </div>
       </div>
+      
     </section>
 
     <script>
